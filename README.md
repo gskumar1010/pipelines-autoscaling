@@ -5,7 +5,8 @@ oc new-project cicd --display-name="CI/CD" <br/>
 oc policy add-role-to-group edit system:serviceaccounts:cicd -n dev <br/>
 add jenkins ephemeral to dev project <br/>
 add nodejs6 imagestream in openshift namespace <br/>
-oc new-app -n cicd -f cicd-template.yaml <br/> 
+
+Clone this git repo. Navigate to the directory where you have cicd-template.yaml Then oc new-app -n cicd -f cicd-template.yaml <br/> 
 
 oc set triggers bc/tasks-pipeline --from-github <br/>
 oc describe bc/tasks-pipeline <br/>
